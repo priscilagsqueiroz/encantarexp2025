@@ -1,0 +1,332 @@
+    <section class="speakers-section">
+        <div class="container-fluid">
+            <div class="speakers-title">
+                <h3 class="md-text">CONHEÇA OS</h3>
+                <h2>PALESTRANTES</h2>
+            </div>
+            
+            <!-- Desktop Speakers (3 per row) - Visible only on md and up -->
+            <div class="d-none d-md-block">
+                <div id="speakerCarouselDesktop" class="carousel slide speaker-carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        
+                        <!-- First slide -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/bethel-lombardi.jpg" alt="Bethel Lombardi" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Bethel</p>
+                                            <p class="speaker-name" style="font-weight: 200;">LOMBARDI</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/carlosferreirinha.png" alt="Outra Pessoa" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Carlos</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Ferreirinha</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/claytonsouza.png" alt="Outra Pessoa" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Clayton</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Souza</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Second slide -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/debora_foto.png" alt="Palestrante 4" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Débora</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Pereira</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/evertonrosa_foto.png" alt="Palestrante 5" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Everton</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Rosa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/flaviogarcia_foto.png" alt="Palestrante 6" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Flávio</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Garcia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Terceiro-->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/joaoadolfo.png" alt="Palestrante 4" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">João</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Adolfo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/marcosgoleiro_foto.png" alt="Palestrante 5" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Marcos</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Roberto</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/odailsonfonseca.png" alt="Palestrante 6" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Odailson</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Fonseca</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Quarto-->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/renatoaalves_foto.png" alt="Palestrante 4" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Renata</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Alves</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/sofiahecktheuer.png" alt="Palestrante 5" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Sofia</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Hecktheuer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="speaker-card">
+                                        <img src="./assets/img/palestrantes/stevenphil.png" alt="Palestrante 6" class="img-fluid">
+                                        <div class="speaker-info">
+                                            <p class="speaker-name">Steven</p>
+                                            <p class="speaker-name" style="font-weight: 200;">Phil</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#speakerCarouselDesktop" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#speakerCarouselDesktop" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    
+                    <!-- Carousel indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#speakerCarouselDesktop" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#speakerCarouselDesktop" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#speakerCarouselDesktop" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#speakerCarouselDesktop" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Speakers (1 per slide) - Visible only on small screens -->
+            <div class="d-md-none speakers-container">
+                <div id="speakerCarouselMobile" class="carousel slide speaker-carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- First speaker -->
+                        <div class="carousel-item active">
+                            <div class="speaker-card">
+                                <img src="./assets/img/bethel-lombardi.jpg" alt="Bethel Lombardi" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">Bethel</p>
+                                    <p class="speaker-name" style="font-weight: 200;">LOMBARDI</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Second speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <img src="./assets/img/palestrantes/carlosferreirinha.png" alt="Outra Pessoa" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">Carlos</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Ferreirinha</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Third speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <img src="./assets/img/palestrantes/claytonsouza.png" alt="Outra Pessoa" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">Clayton</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Souza</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Fourth speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <img src="./assets/img/palestrantes/debora_foto.png" alt="Palestrante 4" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">Débora</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Pereira</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Fifth speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <img src="./assets/img/palestrantes/marcosgoleiro_foto.png" alt="Palestrante 5" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">Marcos</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Roberto</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Sixth speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <img src="./assets/img/palestrantes/flaviogarcia_foto.png" alt="Palestrante 6" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">Flávio</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Garcia</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sete speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <img src="./assets/img/palestrantes/joaoadolfo.png" alt="Palestrante 4" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">João</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Adolfo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Oito speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <div class="speaker-info">
+                                    <img src="./assets/img/palestrantes/marcosgoleiro_foto.png" alt="Palestrante 5" class="img-fluid">
+                                    <p class="speaker-name">Marcos</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Roberto</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nove speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <img src="./assets/img/palestrantes/odailsonfonseca.png" alt="Palestrante 6" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">Odailson</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Fonseca</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dez speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <img src="./assets/img/palestrantes/renatoaalves_foto.png" alt="Palestrante 4" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">Renata</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Alves</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Onze speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <img src="./assets/img/palestrantes/sofiahecktheuer.png" alt="Palestrante 5" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">Sofia</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Hecktheuer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- doze speaker -->
+                        <div class="carousel-item">
+                            <div class="speaker-card">
+                                <img src="./assets/img/palestrantes/stevenphil.png" alt="Palestrante 6" class="img-fluid">
+                                <div class="speaker-info">
+                                    <p class="speaker-name">Steven</p>
+                                    <p class="speaker-name" style="font-weight: 200;">Phil</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Carousel controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    
+                    <!-- Carousel indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                        <button type="button" data-bs-target="#speakerCarouselMobile" data-bs-slide-to="11" aria-label="Slide 12"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
