@@ -537,13 +537,16 @@ body {
   display: flex;
   animation: scroll 60s linear infinite;
   will-change: transform;
-  -webkit-transform: translateZ(0); /* Aceleração por GPU no Safari */
+  -webkit-transform: translateZ(0); /* Mantém a aceleração por GPU */
+  contain: content; /* NOVO – ajuda Safari a isolar a área de renderização */
+  overflow: hidden; /* NOVO – evita glitches visuais e quebra de render */
 }
 
 .carousel-slide {
   min-width: 300px;
   position: relative;
   flex-shrink: 0;
+  backface-visibility: hidden; /* NOVO – ajuda o Safari a manter consistência */
 }
 
 .carousel-slide img {

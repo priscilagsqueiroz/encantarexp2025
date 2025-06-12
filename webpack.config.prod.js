@@ -75,7 +75,7 @@ module.exports = merge(common, {
         exclude: /node_modules/,
         terserOptions: {
           compress: {
-            drop_console: true,
+            drop_console: false,
           },
         },
       }),

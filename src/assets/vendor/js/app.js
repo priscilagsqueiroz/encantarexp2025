@@ -121,16 +121,36 @@ duplicated.forEach((speaker) => {
   `;
   track.appendChild(slide);
 });
-
+/*
+Em vez de somar a largura de cada slide individualmente
+(o que depende do estado de renderização de todos),
+podemos assumir que todos os slides têm a mesma largura.
+Com isso, o cálculo se torna muito mais seguro.
+*/
 // Calcular a largura da faixa do carrossel ao carregar
 window.addEventListener('load', () => {
   const slides = track.querySelectorAll(".carousel-slide");
-  let totalWidth = 0;
-  slides.forEach(slide => {
-    totalWidth += slide.offsetWidth;
-  });
-  track.style.width = `${totalWidth}px`;
+
+  if (slides.length > 0) {
+    const slideWidth = slides[0].getBoundingClientRect().width; // mais confiável no Safari
+    const totalWidth = slideWidth * slides.length;
+
+    // 👇 Adiciona workaround específico para Safari: forçar reflow + double RAF
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        track.style.width = `${totalWidth}px`;
+
+        // Força o Safari a reprocessar o layout corretamente
+        track.style.display = "none";
+        void track.offsetHeight; // trigger reflow
+        track.style.display = "flex";
+      });
+    });
+
+    console.log(`Cálculo de largura: ${slides.length} slides * ${slideWidth}px = ${totalWidth}px`);
+  }
 });
+
 
 // Modal ao clicar em imagem do palestrante
 document.querySelector(".carousel-track").addEventListener("click", (e) => {
@@ -158,6 +178,3 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 window.closeModal = closeModal;
-
-// Import Bootstrap JS (se estiver usando em ambiente com bundler)
-import * as bootstrap from "bootstrap";
