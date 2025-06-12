@@ -536,12 +536,14 @@ body {
 .carousel-track {
   display: flex;
   animation: scroll 60s linear infinite;
-  width: max-content;
+  will-change: transform;
+  -webkit-transform: translateZ(0); /* Aceleração por GPU no Safari */
 }
 
 .carousel-slide {
   min-width: 300px;
   position: relative;
+  flex-shrink: 0;
 }
 
 .carousel-slide img {
@@ -579,13 +581,15 @@ body {
 @keyframes scroll {
   0% {
     transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
-
   100% {
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
   }
 }
 
+/* Modal e título (sem mudanças importantes aqui) */
 .modal {
   display: none;
   position: fixed;
@@ -595,9 +599,10 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 20px;
+  overflow-y: auto; 
 }
 
 .modal-content {
@@ -610,6 +615,9 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   color: #333;
+  max-height: none;     
+  overflow-y: visible;      
+  box-sizing: border-box;
 }
 
 .modal-content img {
@@ -623,13 +631,14 @@ body {
   gap: 20px;
   align-items: flex-start;
   flex-wrap: wrap;
-  /* opcional para melhor responsividade */
 }
 
 .modal-body-content img {
   max-width: 250px;
   height: auto;
   border-radius: 12px;
+  max-height: 40vh;      /* ✅ Adicionado para evitar que a imagem fique muito alta no celular */
+  object-fit: cover;     /* ✅ Adicionado para garantir que a imagem se ajuste bem */
 }
 
 .modal-text {
@@ -644,15 +653,6 @@ body {
 .modal-text h2 {
   margin-bottom: 10px;
   font-size: 2.5rem;
-}
-
-.modal-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
 }
 
 .modal-close {
@@ -680,11 +680,11 @@ body {
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  overflow-y: auto; /* ✅ Também aqui, por segurança extra em alguns navegadores */
 }
 
 #modal-content {
   position: relative;
-  /* importante para o botão ser posicionado em relação ao conteúdo */
   background: white;
   max-width: 800px;
   width: 100%;
@@ -693,6 +693,8 @@ body {
   box-sizing: border-box;
   display: flex;
   gap: 20px;
+  max-height: 90vh;     /* ✅ Mesma correção aqui, caso você use esse ID em vez da classe */
+  overflow-y: auto;
 }
 
 .hover-text {
@@ -733,7 +735,6 @@ body {
   margin-bottom: 30px;
 }
 
-
 @media (max-width: 768px) {
   .carousel-slide {
     min-width: 80vw;
@@ -747,13 +748,27 @@ body {
   .modal-content {
     flex-direction: column;
     align-items: center;
+    max-height: none;   
+    overflow-y: visible;
+    padding: 20px;
+  }
+
+  .modal-body-content img {
+    max-width: 100%;         
+    max-height: none;        
+    height: auto;
+    object-fit: contain;     
+  }
+
+  .modal-body-content {
+    flex-direction: column;  
+    align-items: center;
   }
 
   .carousel-title h2 {
     font-size: 2.5rem;
   }
 }
-
 
 /* banner*/
 

@@ -104,26 +104,35 @@ const speakersData = [
     name: "Lucas Lombardi",
     image: "./assets/img/palestrantes/lucaslombardi.png",
     description: "<p>Encantador mirim que já inspira com atitude e coração</p> <p>Jovem talento que acredita que não é preciso esperar crescer para começar a fazer a diferença.</p> <p>Com carisma, presença e visão, Lucas mostra que idade não limita propósito nem impacto.</p> <p>Defensor de um mundo com mais gentileza, coragem e grandes ideias colocadas em prática.</p> <p>Uma prova viva de que encantamento começa no olhar, na atitude e no exemplo — em qualquer idade.</p>"
-  },
+  }
 ];
 
+// Adiciona slides duplicados no carrossel
 const track = document.getElementById("carousel-track");
-
-// Duplicar slides
 const duplicated = [...speakersData, ...speakersData];
 duplicated.forEach((speaker) => {
   const slide = document.createElement("div");
   slide.className = "carousel-slide";
   const [firstName, ...lastName] = speaker.name.split(" ");
   slide.innerHTML = `
-  <img src="${speaker.image}" alt="${speaker.name}" data-id="${speaker.id}">
-  <div class="speaker-name"><b>${firstName}</b> ${lastName.join(" ")}</div>
-  <div class="hover-text">Saiba tudo sobre os<br>palestrantes, toque na foto!</div>
-`;
+    <img src="${speaker.image}" alt="${speaker.name}" data-id="${speaker.id}">
+    <div class="speaker-name"><b>${firstName}</b> ${lastName.join(" ")}</div>
+    <div class="hover-text">Saiba tudo sobre os<br>palestrantes, toque na foto!</div>
+  `;
   track.appendChild(slide);
 });
 
-// Modal
+// Calcular a largura da faixa do carrossel ao carregar
+window.addEventListener('load', () => {
+  const slides = track.querySelectorAll(".carousel-slide");
+  let totalWidth = 0;
+  slides.forEach(slide => {
+    totalWidth += slide.offsetWidth;
+  });
+  track.style.width = `${totalWidth}px`;
+});
+
+// Modal ao clicar em imagem do palestrante
 document.querySelector(".carousel-track").addEventListener("click", (e) => {
   const img = e.target.closest("img");
   if (!img) return;
@@ -133,15 +142,15 @@ document.querySelector(".carousel-track").addEventListener("click", (e) => {
   const modal = document.getElementById("modal");
   const modalContent = document.getElementById("modal-content");
   modalContent.innerHTML = `
-  <button class="modal-close" onclick="closeModal()">×</button>
-  <div class="modal-body-content">
-    <img src="${speaker.image}" alt="${speaker.name}">
-    <div class="modal-text">
-      <h2>${speaker.name}</h2>
-      ${speaker.description}
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-body-content">
+      <img src="${speaker.image}" alt="${speaker.name}">
+      <div class="modal-text">
+        <h2>${speaker.name}</h2>
+        ${speaker.description}
+      </div>
     </div>
-  </div>
-`;
+  `;
   modal.style.display = "flex";
 });
 
@@ -150,4 +159,5 @@ function closeModal() {
 }
 window.closeModal = closeModal;
 
-import * as bootstrap from "bootstrap"
+// Import Bootstrap JS (se estiver usando em ambiente com bundler)
+import * as bootstrap from "bootstrap";

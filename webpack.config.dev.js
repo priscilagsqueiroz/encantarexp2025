@@ -64,7 +64,7 @@ module.exports = merge(common, {
   devServer: {
     static: path.join(__dirname, 'dist'),
     compress: true,
-    port: 8080, // Porta alterada para 8080
+    port: 3000, 
     open: true,
     setupMiddlewares: (middlewares, devServer) => {
       if (!devServer) {
