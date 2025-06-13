@@ -104,6 +104,12 @@ const speakersData = [
     name: "Lucas Lombardi",
     image: "./assets/img/palestrantes/lucaslombardi.png",
     description: "<p>Encantador mirim que já inspira com atitude e coração</p> <p>Jovem talento que acredita que não é preciso esperar crescer para começar a fazer a diferença.</p> <p>Com carisma, presença e visão, Lucas mostra que idade não limita propósito nem impacto.</p> <p>Defensor de um mundo com mais gentileza, coragem e grandes ideias colocadas em prática.</p> <p>Uma prova viva de que encantamento começa no olhar, na atitude e no exemplo — em qualquer idade.</p>"
+  },
+  {
+    id: "robson",
+    name: "Robson Jassa",
+    image: "./assets/img/palestrantes/robson.png",
+    description: "<p>Cabeleireiro e educador com 34 anos de experiência, hoje é referência nacional em corte, penteado e colorimetria.</p> <p>Reconhecido pelo programa Fábrica de Casamentos (SBT/Discovery), além de ter participado do quadro Beleza Renovada do Programa Eliana, no SBT.</p> <p>Atende celebridades no Jassa Hair Studio, localizado na área nobre de São Paulo.</p> <p>Certificado pelas maiores academias de beleza do mundo.</p> <p>Embaixador de grandes marcas e premiado internacionalmente.</p>"
   }
 ];
 
@@ -121,36 +127,16 @@ duplicated.forEach((speaker) => {
   `;
   track.appendChild(slide);
 });
-/*
-Em vez de somar a largura de cada slide individualmente
-(o que depende do estado de renderização de todos),
-podemos assumir que todos os slides têm a mesma largura.
-Com isso, o cálculo se torna muito mais seguro.
-*/
+
 // Calcular a largura da faixa do carrossel ao carregar
 window.addEventListener('load', () => {
   const slides = track.querySelectorAll(".carousel-slide");
-
-  if (slides.length > 0) {
-    const slideWidth = slides[0].getBoundingClientRect().width; // mais confiável no Safari
-    const totalWidth = slideWidth * slides.length;
-
-    // 👇 Adiciona workaround específico para Safari: forçar reflow + double RAF
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        track.style.width = `${totalWidth}px`;
-
-        // Força o Safari a reprocessar o layout corretamente
-        track.style.display = "none";
-        void track.offsetHeight; // trigger reflow
-        track.style.display = "flex";
-      });
-    });
-
-    console.log(`Cálculo de largura: ${slides.length} slides * ${slideWidth}px = ${totalWidth}px`);
-  }
+  let totalWidth = 0;
+  slides.forEach(slide => {
+    totalWidth += slide.offsetWidth;
+  });
+  track.style.width = `${totalWidth}px`;
 });
-
 
 // Modal ao clicar em imagem do palestrante
 document.querySelector(".carousel-track").addEventListener("click", (e) => {
@@ -178,3 +164,38 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 window.closeModal = closeModal;
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let currentOffset = 0;
+const slideWidth = track.querySelector(".carousel-slide").offsetWidth;
+const totalSlides = track.querySelectorAll(".carousel-slide").length;
+const visibleSlides = Math.floor(track.parentElement.offsetWidth / slideWidth);
+
+function updateCarousel() {
+  track.style.transition = "transform 0.5s ease-in-out";
+  track.style.transform = `translateX(-${currentOffset}px)`;
+}
+
+// Botão de próximo
+nextBtn.addEventListener("click", () => {
+  currentOffset += slideWidth;
+  if (currentOffset >= slideWidth * (totalSlides - visibleSlides)) {
+    currentOffset = 0; // Loop
+  }
+  updateCarousel();
+});
+
+// Botão de anterior
+prevBtn.addEventListener("click", () => {
+  currentOffset -= slideWidth;
+  if (currentOffset < 0) {
+    currentOffset = slideWidth * (totalSlides - visibleSlides); // Vai para o final
+  }
+  updateCarousel();
+});
+
+
+// Import Bootstrap JS (se estiver usando em ambiente com bundler)
+import * as bootstrap from "bootstrap";
