@@ -94,12 +94,6 @@ const speakersData = [
     description: "<p>Empresária, palestrante, influenciadora digital e mentora de mulheres empreendedoras.</p> <p>Atua há mais de 10 anos no universo do empreendedorismo, unindo visão de negócio à gestão das emoções.</p> <p>Finalista do MasterChef 19, é formada em Artes Cênicas, Publicidade e Propaganda e Confeitaria.</p> <p>Hoje, dedica-se a capacitar mulheres para alcançarem sucesso e descobrirem todo o seu potencial.</p>"
   },
   {
-    id: "thais",
-    name: "Thais Rezende",
-    image: "./assets/img/palestrantes/thaisrezende.png",
-    description: "<p>Empreendedora, palestrante e fundadora do projeto Líderes do Futuro</p> <p>Fundadora do Líderes do Futuro, iniciativa que transforma a educação financeira e o empreendedorismo infantil no Brasil.</p> <p>Atua com propósito em preparar crianças e pais para assumirem o protagonismo de um futuro próspero e consciente.</p> <p>Palestrante inspiradora, une ação prática, impacto social e valores cristãos em sua missão educativa.</p> <p>Defensora de uma nova forma de educar, que vai além do conteúdo: forma caráter, visão e responsabilidade desde cedo.</p>"
-  },
-  {
     id: "lucas",
     name: "Lucas Lombardi",
     image: "./assets/img/palestrantes/lucaslombardi.png",
