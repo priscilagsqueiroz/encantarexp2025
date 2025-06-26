@@ -1,1 +1,22 @@
-node_modules
+# Node modules
+node_modules/
+
+# VS Code
+.vscode/
+
+# Arquivos de cache
+*.log
+*.tmp
+*.bak
+*.swp
+*.pack
+
+# Diretórios e arquivos de build
+dist/
+build/
+
+# Outros arquivos temporários
+.DS_Store
+Thumbs.db
+package-lock.json
+.editorconfig
